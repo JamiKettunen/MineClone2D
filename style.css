@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nodisp {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column;
+}
+
+.nowrap {
+  flex-flow: nowrap;
+}
+
+.center-x {
+  width: 100%;
+  justify-content: center;
+}
+
+.center-y {
+  height: 100%;
+  align-items: center;
+}
+
+html, body {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 100%;
+  background-color: rgb(16, 16, 16);/*63,19,0*/
+  text-align: center;
+  color: white;
+  font-size: 12pt;
+  font-family: 'arial', 'sans-serif';
+}
+
+canvas {
+  image-rendering: -moz-crisp-edges;    /* Firefox */
+  image-rendering: -webkit-crisp-edges; /* Webkit (Safari) */
+  image-rendering: pixelated;           /* Chrome */
+}
+
+#infoDiv {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg.png");
+}
+
+p#infoMsg {
+  font-size: 24pt;
+}
+
+.gc {
+  background-color: rgb(2, 2, 2);
+  /*border: 2px solid rgb(0, 125, 0);*/
+}
+
+#gameDiv {
+  display: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("bg.png");
+}
+
+p#selInfo {
+  margin-bottom: 16px;
+}
+
+canvas.scale-2x {
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+canvas#selTile {
+  margin-bottom: 24px;/*20*/
+  cursor: pointer;
+}
+
+#infoBar {
+  margin-bottom: 10px;
+}
+
+#pPaintMode {
+  margin-right: 12px;
+  color: lime;
+  cursor: pointer;
+}
+
+#pRandomMode {
+  margin-left: 12px;
+  color: red;
+  cursor: pointer;
+}
+
+canvas#game {
+  cursor: crosshair;
+  border-radius: 2px;
+}
+
+p#clearAll {
+  margin-top: 24px;
+  cursor: pointer;
+  color: red;
+}
+
+p#saveLnk {
+  display: none;
+}
+
+#tileSelDiv {
+  display: none;
+}
+
+#canvTileSel {
+  margin-top: 12px;
+  cursor: crosshair;
+}

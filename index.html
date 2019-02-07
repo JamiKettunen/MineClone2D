@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" unselectable="on" onselectstart="return false;" onmousedown="return false;">
+
+  <head>
+    <title>MineClone 2D</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="flex center-x center-y" onload="setup()">
+    <!-- Loading / info screen -->
+    <div id="infoDiv" class="flex center-x center-y gc">
+      <p id="infoMsg">Loading assets...</p>
+    </div>
+
+    <!-- Game UI stuff etc. -->
+    <div id="gameDiv" class="flex center-x center-y">
+      <p id="selInfo">Selected tile: 1</p>
+      <canvas id="selTile" class="scale-2x" onclick="toggleTileSelector()"></canvas>
+  
+      <div id="gameUI" class="flex center-x">
+        <div>
+          <div id="infoBar" class="flex center-x nowrap">
+            <p id="pPaintMode" onclick="updateModes(randomMode, !paintMode)">Painting Mode</p>
+            <p id="pRandomMode" onclick="updateModes(!randomMode, paintMode)">Random Mode</p>
+          </div>
+          <canvas id="game" class="gc"></canvas>
+      
+          <p id="clearAll" onclick="clearTiles()">Clear canvas (rip)</p>
+          <p style="margin-top: 8px;">Press 'H' for help</p>
+
+          <a id="saveLnk"></a>
+          
+          <label id="lblWorldUpload" for="worldUpload" style="display: none"></label>
+          <input id="worldUpload" type="file" style="display: none">
+        </div>
+        
+      </div>
+
+      <!-- Tile selection interface -->
+      <div id="tileSelDiv" class="flex center-x">
+        <div>
+          <p>Select a tile:</p>
+          <canvas id="canvTileSel"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+
+</html>
